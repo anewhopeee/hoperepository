@@ -18,7 +18,7 @@ namespace HGBot
 
             Handler = new CommandHandler();
 
-            await Client.LoginAsync(Discord.TokenType.Bot, "Njc0Nzk1MDA3MTQzNTc1NTcy.XjtziA.NbtrzTox5n9MeYvZDjpLV-JMsfI", true);
+            await Client.LoginAsync(Discord.TokenType.Bot, "(bot key)", true);
 
             await Client.StartAsync();
 
