@@ -1,0 +1,4 @@
+.vs/*
+HGDiscordBot/bin/*
+HGDiscordBot/obj/*
+Token.txt

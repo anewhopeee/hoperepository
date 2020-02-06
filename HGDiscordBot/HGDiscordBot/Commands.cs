@@ -30,7 +30,7 @@ namespace HGBot
             var user = Context.User;
 
             // build out the reply
-            sb.AppendLine($"You are -> []");
+            sb.AppendLine($"You are -> [{user}]");
             sb.AppendLine("I must now say, World!");
 
             // send simple string reply
