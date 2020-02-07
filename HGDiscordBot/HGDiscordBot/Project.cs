@@ -11,6 +11,7 @@ namespace HGBot
     {
         public DiscordSocketClient Client;
         public CommandHandler Handler;
+        private string DiscordBotToken = System.IO.File.ReadAllText(@"Token.txt"); // Place a file Named "Token.txt" in HGDiscordBot\bin\Debug\netcoreapp3.1\ with your Bot Token in it
         static void Main(string[] args) => new Program().Start().GetAwaiter().GetResult();
         public async Task Start()
         {
@@ -18,7 +19,7 @@ namespace HGBot
 
             Handler = new CommandHandler();
 
-            await Client.LoginAsync(Discord.TokenType.Bot, "Your Token here(We have to implement a way to get the token for a file)", true);
+            await Client.LoginAsync(Discord.TokenType.Bot, DiscordBotToken, true);
 
             await Client.StartAsync();
 
