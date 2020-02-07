@@ -51,6 +51,7 @@ namespace HGBot
             sb.AppendLine("?ping => Will return the ping in ms");
             sb.AppendLine("?hello => Will display crazy Dev stuff or crash the bot");
             sb.AppendLine("?withdraw {Resource} {Amount} => Will send you resources from the alliance bank");
+            sb.AppendLine("?resource => Will display all withdrawable resources")
             /*
             sb.AppendLine("?withdrawToNationID {NationID} {Resource} {Amount} => Will send resources to the specified Nation");
             sb.AppendLine("?limits => Will display your Daily withdraw Limits");
@@ -59,6 +60,21 @@ namespace HGBot
             
             await ReplyAsync(sb.ToString()); // send simple string reply
         }
+        [Command("resources")]
+        public async Task ResourcesCommand([Remainder]string args = null)
+        {
+            // initialize empty string builder for reply
+            var sb = new StringBuilder();
+
+            // build out the reply
+            sb.AppendLine("Withdrawable Resources are :");
+            sb.AppendLine("Money, Food, Coal, Oil, Uranium, Lead");
+            sb.AppendLine("Iron, Bauxite, Gas, Munitions, Steel, Aluminum");
+
+            // send simple string reply
+            await ReplyAsync(sb.ToString());
+        }
+
         [Command("withdraw")]
         public async Task withdraw([Remainder]string args = null)
         {
