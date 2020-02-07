@@ -1,11 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HGDiscordBot
+﻿namespace HGDiscordBot
 {
-    class CheckIfAllowedToWithdraw
+    public class CheckIfAllowedToWithdraw
     {
-        //  Checks if requested User is linked to a NationID in DB and Return True/False
+        public static string ReturnNationIDIfUserIsValidAndDailyLimitsMatchRequest(string User, string Resource, int Amount)
+        {
+            if () //User Found
+            {
+                if () // Resource is existing
+                {
+                    if () // Limit
+                    {
+                        return NationID;
+                    }
+                    else
+                    {
+                        return "LimitBlock";
+                    }
+                }
+                else
+                {
+                    return "ResourceError";
+                }
+            }
+            else
+            {
+                return "No Nation";
+            }
+        }
+
     }
 }
